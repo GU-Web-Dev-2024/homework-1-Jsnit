@@ -2,10 +2,28 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Page Title</title>
+    <title>CPSC 332 Web Development: Jake Snitily</title>
+    <style>
+        body { background-color: purple; }
+    </style>
 </head>
 <body>
-    <h1>This is a Heading</h1>
-    <p>This is a paragraph.</p>
+    <h1>This is the hw 1 submission</h1>
+    <p>Throughout the duration of this course I would like to learn the <strong>driving components behind web-based software</strong>, and hopefully have a better grasp on the core principles of web dev. 
+        This will be done through the completion of <em>in-class assignments, readings, and homework projects</em> designed to further my knowledge of web-based systems.
+    </p>
+    <button onclick="changeColor()"> Change Background Color </button>
+    <img src = "AI_Gen_Sorcerer.jpg" alt = "Cool sorcerer from pixabay ">
+    <h2><a href="https://pixabay.com/illustrations/ai-generated-sorcerer-runes-symbol-8560804/">Link for pixabay download</a></h2>
+    <script>
+        function changeColor() {
+            // array of colors to switch between
+            const colors =['purple', 'blue', 'green', 'red', 'yellow'];
+            let currentColor = document.body.style.backgroundColor;
+            let nextColor = colors[(colors.indexOf(currentColor) + 1) % colors.length];
+            // set the new background color
+            document.body.style.backgroundColor = nextColor;
+        }
+    </script>
 </body>
 </html>
